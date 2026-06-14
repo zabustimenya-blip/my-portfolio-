@@ -36,24 +36,62 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    align-items: center;
+
+    max-width: 1100px;
+    margin: 20px auto;
+
+    padding: 18px 30px;
+
+    background: rgba(17,24,39,0.6);
+
+    border: 1px solid rgba(255,255,255,0.05);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(12px);
+
     position: relative;
     z-index: 2;
 }
 
 .logo {
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 700;
+
+    background: linear-gradient(90deg,#3b82f6,#22c55e);
+
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .nav a {
-    color: white;
+    color: #cbd5e1;
     text-decoration: none;
-    margin-left: 15px;
-    opacity: 0.7;
+    margin-left: 30px;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s;
+}.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #3b82f6;
+
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
 }
 
 .nav a:hover {
-    opacity: 1;
+    color: white;
 }
 
 /* hero */
@@ -115,4 +153,45 @@ button:hover {
 .project:hover {
     transform: translateY(-10px);
     border-color: rgba(37,99,235,0.5);
+}
+@media (max-width: 768px) {
+    .cursor-glow {
+        display: none;
+    }
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero {
+    animation: fadeUp 0.8s ease;
+}
+
+.project {
+    animation: fadeUp 1s ease;
+}
+.project:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.project:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.project:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.project {
+    animation-fill-mode: both;
+}
+button {
+    animation: fadeUp 1.2s ease;
 }
