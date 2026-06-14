@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1220;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* фон свет */
+.bg-light {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(37,99,235,0.25), transparent 60%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* курсор */
+.cursor-glow {
+    position: fixed;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(34,197,94,0.2), transparent 70%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    opacity: 0.7;
+}
+
+.nav a:hover {
+    opacity: 1;
+}
+
+/* hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    color: #94a3b8;
+}
+
+/* кнопка */
+button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.07);
+}
+
+/* секции */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.project {
+    background: rgba(17, 24, 39, 0.7);
+    padding: 18px;
+    border-radius: 14px;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    border-color: rgba(37,99,235,0.5);
+}
